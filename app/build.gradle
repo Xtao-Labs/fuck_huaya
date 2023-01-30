@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.xtaolabs.fuck_huaya"
-        minSdk 31
+        minSdk 23
         targetSdk 33
         versionCode rootProject.ext.appVersionCode
         versionName rootProject.ext.appVersionName
