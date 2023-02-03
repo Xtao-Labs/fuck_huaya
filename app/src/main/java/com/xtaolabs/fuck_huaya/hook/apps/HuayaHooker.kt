@@ -72,6 +72,17 @@ object HuayaHooker : YukiBaseHooker() {
         }
     }
 
+    private fun fuckTeen() {
+        findClass("cn.fzhuayantcoltd.huayaapp.util.x", appClassLoader).hook {
+            injectMember {
+                method {
+                    name = "o"
+                }
+                replaceToTrue()
+            }
+        }
+    }
+
     override fun onHook() {
         "com.stub.StubApp".hook {
             injectMember {
@@ -90,6 +101,8 @@ object HuayaHooker : YukiBaseHooker() {
                     fuckSignInRewardAd()
                     // 取消更新弹窗
                     fuckUpdate()
+                    // 取消青少年模式弹窗
+                    fuckTeen()
                 }
             }
         }
