@@ -7,6 +7,7 @@ import com.highcapable.yukihookapi.hook.type.java.UnitType
 
 object HuayaHooker : YukiBaseHooker() {
     private fun fuckSplashAd() {
+        // return openScreenDto != null && openScreenDto.isNoSplash();
         findClass("cn.fzhuayantcoltd.huayaapp.dto.ConfigDto", appClassLoader).hook {
             injectMember {
                 method {
@@ -18,6 +19,7 @@ object HuayaHooker : YukiBaseHooker() {
     }
 
     private fun fuckReadAd() {
+        // bookReadLimitDialog.show();
         findClass("cn.fzhuayantcoltd.huayaapp.ui.activity.longcartoon.LongBookDetailActivity", appClassLoader).hook {
             injectMember {
                 method {
@@ -31,6 +33,7 @@ object HuayaHooker : YukiBaseHooker() {
     }
 
     private fun fuckSignInAd() {
+        // return this.m.user.isValidVip();
         findClass("cn.fzhuayantcoltd.huayaapp.a.a", appClassLoader).hook {
             injectMember {
                 method {
@@ -44,6 +47,7 @@ object HuayaHooker : YukiBaseHooker() {
     }
 
     private fun fuckSignInRewardAd() {
+        // AdFromEnum.SIGNIN
         findClass("cn.fzhuayantcoltd.huayaapp.ui.activity.task.TasksCenterActivity", appClassLoader).hook {
             injectMember {
                 method {
@@ -61,6 +65,7 @@ object HuayaHooker : YukiBaseHooker() {
     }
 
     private fun fuckUpdate() {
+        // bookUpdateDialog.show();
         findClass("cn.fzhuayantcoltd.huayaapp.util.f", appClassLoader).hook {
             injectMember {
                 method {
@@ -73,10 +78,11 @@ object HuayaHooker : YukiBaseHooker() {
     }
 
     private fun fuckTeen() {
-        findClass("cn.fzhuayantcoltd.huayaapp.util.x", appClassLoader).hook {
+        // isTodayPreventionAddictionDialog1_
+        findClass("cn.fzhuayantcoltd.huayaapp.util.y", appClassLoader).hook {
             injectMember {
                 method {
-                    name = "o"
+                    name = "s"
                 }
                 replaceToTrue()
             }

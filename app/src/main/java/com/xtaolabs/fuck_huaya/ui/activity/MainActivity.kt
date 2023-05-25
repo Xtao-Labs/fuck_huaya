@@ -6,6 +6,7 @@ import android.content.ComponentName
 import android.content.pm.PackageManager
 import androidx.core.view.isVisible
 import com.highcapable.yukihookapi.YukiHookAPI
+import com.highcapable.yukihookapi.YukiHookAPI.Status.Executor
 import com.xtaolabs.fuck_huaya.BuildConfig
 import com.xtaolabs.fuck_huaya.R
 import com.xtaolabs.fuck_huaya.databinding.ActivityMainBinding
@@ -79,9 +80,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         )
         binding.mainTextApiWay.isVisible = YukiHookAPI.Status.isModuleActive
         when {
-            YukiHookAPI.Status.executorVersion > 0 ->
+            Executor.apiLevel > 0 ->
                 binding.mainTextApiWay.text =
-                    "Activated by ${YukiHookAPI.Status.executorName} API ${YukiHookAPI.Status.executorVersion}"
+                    "Activated by ${Executor.name} API ${Executor.apiLevel}"
             YukiHookAPI.Status.isTaiChiModuleActive -> binding.mainTextApiWay.text = "Activated by TaiChi"
             else -> binding.mainTextApiWay.text = "Activated by anonymous"
         }
