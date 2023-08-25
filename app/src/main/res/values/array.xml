@@ -2,8 +2,5 @@
 <resources>
     <string-array name="module_scope">
         <item>cn.fzhuayantcoltd.huayaapp</item>
-        <item>com.cimoc.haleydu</item>
-        <item>com.nowcasting.activity</item>
-        <item>com.android.providers.downloads</item>
     </string-array>
 </resources>

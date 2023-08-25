@@ -20,7 +20,10 @@ object HuayaHooker : YukiBaseHooker() {
 
     private fun fuckReadAd() {
         // bookReadLimitDialog.show();
-        findClass("cn.fzhuayantcoltd.huayaapp.ui.activity.longcartoon.LongBookDetailActivity", appClassLoader).hook {
+        findClass(
+            "cn.fzhuayantcoltd.huayaapp.ui.activity.longcartoon.LongBookDetailActivity",
+            appClassLoader
+        ).hook {
             injectMember {
                 method {
                     name = "a"
@@ -48,7 +51,10 @@ object HuayaHooker : YukiBaseHooker() {
 
     private fun fuckSignInRewardAd() {
         // AdFromEnum.SIGNIN
-        findClass("cn.fzhuayantcoltd.huayaapp.ui.activity.task.TasksCenterActivity", appClassLoader).hook {
+        findClass(
+            "cn.fzhuayantcoltd.huayaapp.ui.activity.task.TasksCenterActivity",
+            appClassLoader
+        ).hook {
             injectMember {
                 method {
                     name = "j"
@@ -82,7 +88,7 @@ object HuayaHooker : YukiBaseHooker() {
         findClass("cn.fzhuayantcoltd.huayaapp.util.y", appClassLoader).hook {
             injectMember {
                 method {
-                    name = "s"
+                    name = "r"
                 }
                 replaceToTrue()
             }

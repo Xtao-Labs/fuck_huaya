@@ -40,15 +40,16 @@ android {
     buildFeatures {
         viewBinding true
     }
-    lintOptions {
+    namespace 'com.xtaolabs.fuck_huaya'
+    lint {
         checkReleaseBuilds false
     }
 }
 
 dependencies {
     compileOnly 'de.robv.android.xposed:api:82'
-    implementation 'com.highcapable.yukihookapi:api:1.1.6'
-    ksp 'com.highcapable.yukihookapi:ksp-xposed:1.1.6'
+    implementation 'com.highcapable.yukihookapi:api:1.1.11'
+    ksp 'com.highcapable.yukihookapi:ksp-xposed:1.1.11'
     implementation 'com.github.duanhong169:drawabletoolbox:1.0.7'
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
